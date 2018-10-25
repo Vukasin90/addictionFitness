@@ -1,0 +1,87 @@
+.timetable-page-wrapper {
+    position: relative;
+}
+
+.timetable-event-cards-wrapper {
+    padding: 120px 0;
+}
+
+.timetable-wrapper {
+    overflow-x:auto
+}
+
+.timetable {
+    padding: 50px 0 100px;
+    table {
+        width:100%;
+        border: 1px solid $theme-orange;
+        border-collapse: collapse;
+    }
+    .th-empty {
+        background: rgba($theme-orange, 0.7);
+    }
+    th, td {
+        border-bottom: 1px solid $theme-orange;
+        border-collapse: collapse;
+    }
+    th, td {
+        width: 155px;
+        height: 100px;
+    }
+    th {
+        background: $theme-orange;
+        font-size: 14px;
+    }
+    td {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.timetable-class-sort {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 40px;
+    span {
+        font-size: 30px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: $black;
+        margin-right: 20px;
+        cursor: pointer;
+        &:hover {
+            color: $theme-orange;
+        }
+    }
+}
+
+.timetable-class-sort > .timetable-active_class {
+    color: $theme-orange;
+}
+
+.timetable .table-cell-bg {
+    background: $theme-orange;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.timetable-aerobik {
+    color: #c102c3;
+}
+
+.timetable-fintess {
+    color: #116800;
+}
+
+.timetable-pilates {
+    color: #00b398;
+}
+
+.timetable-joga {
+    color: #ff0000;
+}
+
+.timetable-funkcionalni {
+    color: #0295c3;
+}

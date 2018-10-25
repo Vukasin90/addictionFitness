@@ -1,0 +1,137 @@
+.hero {
+    width: 100%;
+    height: calc(100vh - 140px);
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.hero-cta {
+    position: absolute;
+    padding: 25px 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 275px;
+    background: rgba($theme-orange, 1);
+    border-radius: 2px;
+    h1 {
+        color: $white;
+        font-size: 48px;
+        text-transform: uppercase;
+        span {
+            font-size: 24px;
+            display: block;
+            font-weight: 100;
+            @include mq(600px) {
+                font-size: 18px;
+            }
+        }
+        @include mq(600px) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        @include mq(400px) {
+            font-size: 20px;
+        }
+    }
+    p {
+        color: $white;
+        font-weight: 100;
+        font-size: 14px;
+        @include mq(600px) {
+            font-size: 12px;
+        }
+    }
+    @include mq(768px) {
+        top: unset;
+        bottom: -130px;
+        left: 0;
+        right: 0px;
+        width: 100%;
+        background: rgba($theme-orange, 0.8);
+    }
+}
+
+.hero-cta-btn {
+    display: block;
+    width: 140px;
+    height: 40px;
+    border: 1px solid $white;
+    border-radius: 10px;
+    background: none;
+    text-align: center;
+    margin: 30px auto 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.upper-nav {
+    width: 100%;
+    height: 40px;
+    background: $theme-orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upper-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .fb-icon, .instagram-icon {
+        display: inline-block;
+        color: $white;
+        cursor: pointer;
+    }
+    .fb-icon:hover {
+        color: #3B5998;
+    }
+    .instagram-icon:hover {
+        color:#cd486b;
+    }
+    .phone-num {
+        color: $white;
+    }
+}
+
+.main-nav {
+    width: 100%;
+    height: 100px;
+    background: rgba($theme-black, 1);
+    transition: all 500ms ease-in-out;
+}
+
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background: rgba($theme-black, 0.8);
+    transition: all 500ms ease-in-out;
+    z-index: 2;
+    li {
+        font-size: 14px;
+        transition: all 500ms ease-in-out;
+    }
+    .hamburger {
+        top: 35px;
+    }
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+}

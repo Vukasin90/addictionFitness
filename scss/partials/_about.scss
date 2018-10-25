@@ -1,0 +1,281 @@
+
+.about-us {
+    width: 100%;
+    height: 350px;
+    background: $theme-orange;
+    @include mq(900px) {
+        height: unset;
+    }
+}
+
+.about-us-img {
+    width: 370px;
+    height: 200px;
+    background: gray;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include mq(900px) {
+        margin: 20px 0;
+    }
+    @include mq(500px) {
+        width: 100%;
+    }
+}
+
+.about-us-intro {
+    width: 430px;
+    text-align: center;
+    h2 {
+        font-weight: lighter;
+        font-size: 38px;
+        color: $white;
+    }
+    p {
+        font-size: 16px;
+        color: $white;
+        font-weight: 400;
+        margin-top: 15px;
+    }
+    @include mq(900px) {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+//Trainers
+.about-trainers {
+    padding: 110px 0 130px;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: lighter;
+        color: $black;
+        text-transform: uppercase;
+    }
+    @include mq(424px) {
+        padding: 170px 0 130px;
+    }
+}
+
+.about-trainers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    @include mq(1159px) {
+        justify-content: space-around;
+    }
+}
+
+.about-trainers-card {
+    width: 370px;
+    height: 250px;
+    background: $black;
+    display: flex;
+    margin-bottom: 20px;
+    @include mq(400px) {
+        height: unset;
+        padding: 20px 0;
+    }
+}
+
+.about-trainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile {
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    span, p {
+        color: $white;
+    }
+    p {
+        font-size: 12px;
+        font-style: italic;
+        margin: 5px 0 10px;
+    }
+}
+
+.profile-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-class {
+    font-size: 12px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.info {
+    padding: 0 15px;
+    span {
+        font-size: 11px;
+        font-weight: bold;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        text-align: start;
+    }
+    p {
+        font-size: 11px;
+        color: $white;
+        font-weight: 100;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Alt cards
+.about-trainers-card.about-alt {
+    background: $white;
+    .profile span, .profile p {
+        color: $black;
+    }
+    .info span, .info p {
+        color: $black;
+    }
+}
+
+// About CTA
+
+.about-cta {
+    width: 100%;
+    height: 250px;
+    background: $theme-orange;
+    margin-bottom: 100px;
+    @include mq(900px) {
+        height: unset;
+        padding: 20px 0;
+    }
+}
+
+.about-cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    @include mq(900px) {
+        flex-direction: column;
+    }
+}
+
+.about-join-cta {
+    width: 570px;
+    text-align: center;
+    @include mq(900px) {
+        margin-bottom: 40px;
+        }
+    @include mq(600px) {
+        width: 100%;
+    }
+    h2 {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 30px;
+        color: $black;
+        text-transform: uppercase;
+        span {
+            display: block;
+            font-size: 24px;
+            font-weight: 500;
+            color: $black;
+            text-transform: none;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $black;
+        margin: 15px 0;
+    }
+}
+
+.join-today-cta {
+    width: 270px;
+    height: 40px;
+    background: $theme-red;;
+    color: $white;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    @include mq(600px) {
+        width: 100%;
+    }
+}
+
+.about-already-member-cta {
+    width: 430px;
+    text-align: center;
+    h2 {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 30px;
+        color: $black;
+        span {
+            display: block;
+            font-size: 24px;
+            font-weight: 500;
+            color: $black;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $black;
+        margin: 15px 0;
+    }
+    @include mq(600px) {
+        width: 100%;
+    }
+}
+
+.check {
+    border: none;
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    @include mq(600px) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.classes-cta {
+    width: 130px;
+    background: $white;
+    color: $black;
+    margin-right: 30px;
+    @include mq(600px) {
+        width: 100%;
+    }
+}
+
+.calendar-cta {
+    width: 170px;
+    background: $black;
+    color: $theme-orange;
+    @include mq(600px) {
+        width: 100%;
+    }
+}

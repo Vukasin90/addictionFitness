@@ -1,0 +1,123 @@
+.gallery {
+    padding: 0 0 120px;
+}
+
+.gallery-section-wrap {
+    display: flex;
+    overflow: hidden;
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: lighter;
+    }
+    @include mq(1180px) {
+        display: unset;
+        @include clear-fix;
+    }
+}
+
+.gallery-wrapper {
+    width: 770px;
+    display: inline-block;
+    @include mq(1180px) {
+        width: 100%;
+    }
+}
+
+.gallery-container  {
+    width: 100%;
+    height: 348px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    @include mq(600px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: unset;
+    }
+}
+
+.gallery-left, .gallery-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba($white, 1);
+    border-radius: 50%;
+    font-size: 30px;
+    color: $theme-orange;
+    cursor: pointer;
+    &:hover {
+        color: $theme-blue;
+    }
+}
+
+.gallery-left {
+    left: 5px;
+}
+
+.gallery-right {
+    right: 5px;
+}
+
+.gallery-img {
+    width: 255px;
+    height: 173px;
+    background: $theme-blue;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &:hover img {
+        transform: scale(1.2);
+        transition: all 300ms ease-in-out;
+    }
+    @include mq(1180px) {
+        width: 33%;
+        display: inline-block;
+    }
+    @include mq(600px) {
+        width: 100%;
+    }
+}
+
+.partners-wrapper {
+    width: 370px;
+    height: 346px;
+    margin-left: 30px;
+    @include mq(1180px) {
+        margin: 70px 0;
+        width: 100%;
+    }
+}
+
+.partners {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.partners-logo {
+    width: 100px;
+    height: 100px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

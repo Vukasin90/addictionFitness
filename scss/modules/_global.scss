@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $openSans;
+    -webkit-tap-highlight-color: transparent;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+*:focus {
+    outline: 0;
+    outline: none;
+    }
+
+
+
+body {
+    background: rgba($theme-blue, 0.5);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    @include mq(1180px) {
+        padding: 0 25px;
+    }
+}
+
+header {
+    position: relative;
+}
+
+.nav-arrow-dpwn::before {
+    transform: rotateZ(90deg);
+}
+
+//Nav for small screens
+@include mq(1199px) {
+    .main-nav {
+        position: relative;
+    }
+    .navigation {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // overflow-y: scroll;
+        li {
+            display: none;
+            list-style-type: none;
+            text-transform: uppercase;
+            border: 1px solid rgba($white, 0);
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            a {
+                color: $white;
+            }
+            &.active a, &:hover a {
+                color: $theme-blue;
+            }
+            &.active, &:hover {
+                border: 1px solid rgba($theme-blue, 1);
+            }
+        }
+        .dropdown-classes {
+            margin-left: 120px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 500ms ease-in-out;
+            li {
+                text-align: start;
+                &:hover, &:active {
+                    border:  1px solid rgba($white, 0);
+                }
+            }
+            a {
+                font-size: 12px;
+            }
+        }
+        .classes-dropdown-toggle_mobile {
+            max-height: 1000px;
+            transition: all 500ms ease-in-out;
+        }
+        li.classes-dropdown-toggle:active, li.classes-dropdown-toggle:hover {
+            border: 1px solid rgba($white, 0);
+        }
+    }
+
+    .nav {
+        width: 100%;
+    }
+    .nav-open {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: $black;
+        transition: all 500ms ease-in-out;
+        z-index: 2;
+        li {
+            display: block;
+        }
+        .close-nav {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            align-items: center;
+            display: flex;
+            top: 30px;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .close-icon {
+            width: 100%;
+            height: 4px;
+            background: $theme-orange;
+            z-index: 1;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 4px;
+                background: $theme-orange;
+            }
+            &::after {
+                transform: translateY(-16px);
+            }
+        }
+        .close-icon {
+            transform: rotateZ(45deg);
+            transition: all 500ms ease-in-out;
+            &:after {
+                transform: translateY(0px) rotateZ(90deg);
+                transition: all 500ms ease-in-out;
+            }
+        }
+    }
+    .hamburger {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 50px;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    .hamburger-icon {
+        width: 100%;
+        height: 4px;
+        background: $theme-orange;
+        z-index: 1;
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: $theme-orange;
+        }
+        &::before {
+            transform: translateY(12px);
+        }
+        &::after {
+            transform: translateY(-16px);
+        }
+    }
+    .close-nav {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        display: none;
+        align-items: center;
+        bottom: 13px;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+}
+
+// Nav for big screens
+@include mq-L(1200px) {
+    .navigation {
+        li {
+            position: relative;
+            display: inline-block;
+            list-style-type: none;
+            text-transform: uppercase;
+            border: 1px solid rgba($white, 0);
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            a {
+                color: $white;
+            }
+            &.active a, &:hover a, &:active {
+                color: $theme-blue;
+            }
+            &.active, &:hover {
+                border: 1px solid rgba($theme-blue, 1);
+            }
+        }
+    }
+    .dropdown-classes {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        left: 0px;
+        top: 40px;
+        display: none;
+    }
+    .dropdown-classes-wrapper {
+        background: $theme-orange;
+        width: 250px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 30px;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent $theme-orange transparent;
+        }
+        li {
+            display: block;
+            a {
+                color: $white;
+                &:hover {
+                    color: unset;
+                }
+            }
+        }
+    }
+    .classes-dropdown-toggle:hover .dropdown-classes {
+        display: block;
+        transition: all 500ms ease-in-out;
+    }
+}
+
+// Hero for sub pages
+.menu-page-hero {
+    width: 100%;
+}
+
+.menu-page-bg {
+    width: 100%;
+    height: 500px;
+    background: gray;
+}
+
+.menu-page-bg-alt {
+    height: 500px;
+}
+
+.about-page-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    @include mq(900px) {
+        flex-direction: column-reverse;
+        height: unset;
+    }
+}
+
+.menu-page-heading {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: $theme-orange;
+    top: -50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: lighter;
+    color: $white;
+    text-transform: uppercase;
+}
