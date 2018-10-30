@@ -48,16 +48,19 @@ function changeImg() {
 
 window.onload = changeImg;
 
-//Fixing the navigation on scroll
+//Fixing the navigation on scroll and social button
 
 var navbar = document.querySelector('.main-nav');
 var navOffset = navbar.offsetTop;
+var menuBtn = document.querySelector('.menu-button');
 
 function checkPosition() {
     if (window.pageYOffset >= navOffset) {
         navbar.classList.add('navbar-fixed');
+        menuBtn.style.right = '10px';
     } else {
         navbar.classList.remove('navbar-fixed');
+        menuBtn.style.right = '-135px';
     }
 }
 
