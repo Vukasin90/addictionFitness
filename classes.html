@@ -35,10 +35,11 @@
                             </div>
                             <li><a href="/addictionFitness/index.html">Početna</a></li>
                             <li><a href="/addictionFitness/about.html">O nama</a></li>
-                            <li class="classes-dropdown-toggle"><a class="icon-right-open nav-arrow-dpwn">Treninzi</a>
+                            <li class="classes-dropdown-toggle"><a class="icon-right-open nav-arrow-dpwn">Programi</a>
                                 <ul class="dropdown-classes">
                                     <div class="dropdown-classes-wrapper">
                                         <li><a href="/addictionFitness/classes.html">Svi treninzi</a></li>
+                                        <li><a href="/addictionFitness/massage.html">Masaža</a></li>
                                         <li data-class="Aerobik"><a href="/addictionFitness/class-single.html">Aerobik</a></li>
                                         <li><a href="/addictionFitness/class-single.html">Fitness</a></li>
                                         <li><a href="/addictionFitness/class-single.html">Pilates</a></li>
@@ -393,31 +394,32 @@
     </section>
     <section class="gallery">
         <div class="container gallery-section-wrap">
-            <div class="gallery-wrapper">
-                <h2>Gallery</h2>
-                <div class="gallery-container">
-                    <div class="gallery-left icon-left-open"></div>
-                    <div class="gallery-right icon-right-open"></div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img1.jpeg" alt="">
+                <div class="gallery-wrapper">
+                    <a href="/addictionFitness/about.html#about-gallery"><h2>Gallery</h2></a>
+                    <div class="gallery-container">
+                        <div class="gallery-images-wrapper">
+                            <div class="gallery-img" data-aos="flip-up" data-aos-once="true">
+                                <a href="images/hero-img1.jpeg" data-lightbox="mygallery"><img src="images/hero-img1.jpeg" alt=""></a>
+                            </div>
+                            <div class="gallery-img" data-aos="flip-up" data-aos-delay="300" data-aos-once="true">
+                                <a href="images/hero-img2.jpg" data-lightbox="mygallery"><img src="images/hero-img2.jpg" alt=""></a>
+                            </div>
+                            <div class="gallery-img" data-aos="flip-up" data-aos-delay="500" data-aos-once="true">
+                                <a href="images/hero-img3.jpeg" data-lightbox="mygallery"><img src="images/hero-img3.jpeg" alt=""></a>
+                            </div>
+                            <div class="gallery-img" data-aos="flip-up" data-aos-delay="700" data-aos-once="true">
+                                <a href="images/hero-img2.jpg" data-lightbox="mygallery"><img src="images/hero-img2.jpg" alt=""></a>
+                            </div>
+                            <div class="gallery-img" data-aos="flip-up" data-aos-delay="900" data-aos-once="true">
+                                <a href="images/hero-img1.jpeg" data-lightbox="mygallery"><img src="images/hero-img1.jpeg" alt=""></a>
+                            </div>
+                            <div class="gallery-img" data-aos="flip-up" data-aos-delay="1000" data-aos-once="true">
+                                <a href="images/hero-img3.jpeg" data-lightbox="mygallery"><img src="images/hero-img3.jpeg" alt=""></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img2.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img3.jpeg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img2.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img1.jpeg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="images/hero-img3.jpeg" alt="">
-                    </div>
+                    <button type="button" class="gallery-cta" onclick="window.location.href='/addictionFitness/about.html#about-gallery'">Pogledaj celu galeriju</button>
                 </div>
-            </div>
             <div class="partners-wrapper">
                 <h2>Partners</h2>
                 <div class="partners">
@@ -489,7 +491,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script><script src="JS/lightbox-plus-jquery.min.js"></script>
     <script src="JS/app.js"></script>
 </body>
 </html>

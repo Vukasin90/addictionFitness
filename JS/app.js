@@ -46,7 +46,9 @@ function changeImg() {
     setTimeout("changeImg()", time);
 }
 
-window.onload = changeImg;
+if(hero != null) {
+    window.onload = changeImg;
+}
 
 //Fixing the navigation on scroll and social button
 
@@ -74,13 +76,35 @@ var rightArrow = document.querySelector('.right');
 var ourTrainers = document.querySelector('.trainer-belt');
 var position = 0;
 
-rightArrow.addEventListener('click', function() {
-    position += 350;
-   ourTrainers.style.transform = `translateX(-${position}px)`;
-   console.log("desno:" + position);
-   return position;
-});
+// rightArrow.addEventListener('click', function() {
+//     position += 350;
+//    ourTrainers.style.transform = `translateX(-${position}px)`;
+//    console.log("desno:" + position);
+//    return position;
+// });
 
-leftArrow.addEventListener('click', function() {
-    console.log("levo:" + position);
-});
+// leftArrow.addEventListener('click', function() {
+//     console.log("levo:" + position);
+// });
+
+//Gallery toggle
+var galleryContainer = document.querySelector('.gallery-container');
+var galleryWrapper = document.querySelectorAll('.gallery-images-wrapper');
+var galleryActive = document.querySelector('.active-gallery');
+var buttonRight = document.querySelector('.gallery-right');
+var buttonLeft = document.querySelector('.gallery-left');
+
+// var currActive = classList.contains('active-gallery');
+
+// galleryContainer.firstElementChild.classList.add('active-gallery');
+
+// buttonRight.addEventListener('click', function() {
+//     console.log(galleryWrapper.length);
+//     for (i=0; i<=galleryWrapper.length; i++) {
+//         galleryWrapper.nextElementSibling.classList.add('active-gallery');
+//     }
+// });
+
+// buttonLeft.addEventListener('click', function() {
+    
+// });

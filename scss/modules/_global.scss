@@ -61,6 +61,7 @@ header {
             text-align: center;
             a {
                 color: $white;
+                font-family: $openSans;
             }
             &.active a, &:hover a {
                 color: $theme-blue;
@@ -198,6 +199,7 @@ header {
             cursor: pointer;
             a {
                 color: $white;
+                font-family: $openSans;
             }
             &.active a, &:hover a, &:active {
                 color: $theme-blue;
