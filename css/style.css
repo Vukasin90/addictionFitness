@@ -1303,7 +1303,6 @@ html.lb-disable-scrolling {
 .gallery-wrapper {
   width: 770px;
   display: inline-block;
-  position: relative;
   text-align: center; }
   @media (max-width: 1180px) {
     .gallery-wrapper {
@@ -1312,7 +1311,10 @@ html.lb-disable-scrolling {
 .gallery-container {
   width: 100%;
   height: 348px;
-  overflow: hidden; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative; }
   @media (max-width: 600px) {
     .gallery-container {
       flex-wrap: nowrap;
@@ -1320,9 +1322,7 @@ html.lb-disable-scrolling {
       height: unset; } }
 
 .gallery-images-wrapper {
-  position: absolute;
   width: 100%;
-  height: 348px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
