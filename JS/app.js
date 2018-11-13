@@ -74,37 +74,28 @@ window.onscroll = function() {
 var leftArrow = document.querySelector('.left');
 var rightArrow = document.querySelector('.right');
 var ourTrainers = document.querySelector('.trainer-belt');
-var position = 0;
+var clicks = 0;
+var trainers = document.querySelectorAll('.trainers-group-wrap');
+var currentPos = 0;
+console.log(trainers.length);
 
-// rightArrow.addEventListener('click', function() {
-//     position += 350;
-//    ourTrainers.style.transform = `translateX(-${position}px)`;
-//    console.log("desno:" + position);
-//    return position;
-// });
+rightArrow.addEventListener('click', function() { 
+    if(clicks < trainers.length - 1) {
+        currentPos += 250;
+        clicks++;
+        console.log('napred:' +currentPos);
+        ourTrainers.style.transform = `translateY(-${currentPos}px)`;
+    }
+});
 
-// leftArrow.addEventListener('click', function() {
-//     console.log("levo:" + position);
-// });
+leftArrow.addEventListener('click', function() {
+    if(currentPos > 0) {
+        currentPos -= 250;
+        clicks--;
+        console.log('nazad:' + currentPos);
+        ourTrainers.style.transform = `translateY(-${currentPos}px)`;
+    }
+});
 
-//Gallery toggle
-var galleryContainer = document.querySelector('.gallery-container');
-var galleryWrapper = document.querySelectorAll('.gallery-images-wrapper');
-var galleryActive = document.querySelector('.active-gallery');
-var buttonRight = document.querySelector('.gallery-right');
-var buttonLeft = document.querySelector('.gallery-left');
 
-// var currActive = classList.contains('active-gallery');
 
-// galleryContainer.firstElementChild.classList.add('active-gallery');
-
-// buttonRight.addEventListener('click', function() {
-//     console.log(galleryWrapper.length);
-//     for (i=0; i<=galleryWrapper.length; i++) {
-//         galleryWrapper.nextElementSibling.classList.add('active-gallery');
-//     }
-// });
-
-// buttonLeft.addEventListener('click', function() {
-    
-// });

@@ -1114,6 +1114,10 @@ html.lb-disable-scrolling {
       width: 100%; } }
 
 .trainer-belt {
+  height: 100%;
+  transition: all 500ms ease-in-out; }
+
+.trainers-group-wrap {
   display: flex;
   position: relative;
   justify-content: space-between;
